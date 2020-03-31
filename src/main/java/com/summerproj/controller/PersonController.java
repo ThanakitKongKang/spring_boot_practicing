@@ -15,7 +15,7 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-    @GetMapping("/")
+    @GetMapping(value={"", "/"})
     public String index(ModelMap model) {
         Person person = personService.viewPerson();
         // person - parameter แรก ถูกเอาไปใช้ที่หน้า UI

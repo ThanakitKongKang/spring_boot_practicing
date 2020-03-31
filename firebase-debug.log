@@ -1,0 +1,60 @@
+[debug] [2020-03-31T15:56:22.612Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T15:56:22.613Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:kongkang-spring
+[debug] [2020-03-31T15:56:22.613Z] CLI Version:   7.16.2
+[debug] [2020-03-31T15:56:22.614Z] Platform:      win32
+[debug] [2020-03-31T15:56:22.614Z] Node Version:  v12.16.1
+[debug] [2020-03-31T15:56:22.614Z] Time:          Tue Mar 31 2020 22:56:22 GMT+0700 (GMT+07:00)
+[debug] [2020-03-31T15:56:22.614Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T15:56:22.614Z] 
+[debug] [2020-03-31T15:56:22.620Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-31T15:56:22.620Z] > authorizing via signed-in user
+[debug] [2020-03-31T15:56:22.621Z] [iam] checking project spring-practicing for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-03-31T15:56:22.623Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-practicing:testIamPermissions  
+
+[debug] [2020-03-31T15:56:23.945Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T15:56:23.950Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-practicing  
+ 
+[debug] [2020-03-31T15:56:24.290Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'spring-practicing'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] +  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/spring-practicing/overview
+[debug] [2020-03-31T15:56:25.796Z] TypeError: Cannot read property 'deploys' of undefined
+    at C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:84:36
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-03-31T15:58:10.420Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T15:58:10.422Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:kongkang-spring
+[debug] [2020-03-31T15:58:10.422Z] CLI Version:   7.16.2
+[debug] [2020-03-31T15:58:10.422Z] Platform:      win32
+[debug] [2020-03-31T15:58:10.422Z] Node Version:  v12.16.1
+[debug] [2020-03-31T15:58:10.423Z] Time:          Tue Mar 31 2020 22:58:10 GMT+0700 (GMT+07:00)
+[debug] [2020-03-31T15:58:10.423Z] ----------------------------------------------------------------------
+[debug] [2020-03-31T15:58:10.423Z] 
+[debug] [2020-03-31T15:58:10.429Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-03-31T15:58:10.429Z] > authorizing via signed-in user
+[debug] [2020-03-31T15:58:10.429Z] [iam] checking project spring-practicing for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-03-31T15:58:10.431Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/spring-practicing:testIamPermissions  
+
+[debug] [2020-03-31T15:58:11.698Z] <<< HTTP RESPONSE 200
+[debug] [2020-03-31T15:58:11.700Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/spring-practicing  
+ 
+[debug] [2020-03-31T15:58:11.997Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'spring-practicing'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] +  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/spring-practicing/overview
+[debug] [2020-03-31T15:58:13.483Z] TypeError: Cannot read property 'deploys' of undefined
+    at C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:84:36
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.

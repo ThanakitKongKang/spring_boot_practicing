@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "spring-practicing"
+  },
+  "targets": {
+    "spring-practicing": {
+      "hosting": {
+        "production": [
+          "spring-practicing"
+        ],
+        "staging": [
+          "spring-practicing-staging"
+        ]
+      }
+    }
+  }
+}

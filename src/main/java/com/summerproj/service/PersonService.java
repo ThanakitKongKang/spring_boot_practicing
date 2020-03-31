@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class PersonService {
     public Person viewPerson() {
-        return new Person("Chatri", "Ngambenchawong");
+        return new Person("Thanakit", "Chakromwattanakool");
     }
 }
