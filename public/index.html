@@ -88,6 +88,20 @@
     <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something
       extraordinary!</p>
     <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+
+    <div style="padding-top:1rem">
+      <input type="text" style="width:35%" placeholder="username" id="username_write">
+      <input type="text" style="width:35%" placeholder="email" id="email_write">
+      <input type="button" value="Create" onclick="writeUserData()">
+    </div>
+
+    <div style="padding-top:1rem">
+      <input type="text" placeholder="userId" id="userId_read">
+      <input type="button" value="Read" onclick="readUserData()">
+    </div>
+
+
+
   </div>
   <p id="load">Firebase SDK Loading&hellip;</p>
 
@@ -99,7 +113,7 @@
 
   <!-- Add Firebase products that you want to use -->
   <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-database.js"></script>
   <script>
     // TODO: Replace the following with your app's Firebase project configuration
     const firebaseConfig = {
@@ -116,7 +130,7 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   </script>
-  <script>
+  <script defer>
     document.addEventListener('DOMContentLoaded', function () {
       // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
       // // The Firebase SDK is initialized and available here!
@@ -139,6 +153,37 @@
       }
     });
   </script>
+  <script defer>
+    var database = firebase.database();
+
+    // var userId = firebase.auth().currentUser.uid;
+    // console.log(firebase.auth().currentUser)
+    // return firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
+    //   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+    // });
+
+    async function writeUserData() {
+      var username = document.getElementById('username_write').value;
+      var email = document.getElementById('email_write').value;
+
+      await firebase.database().ref('users/').push().set({
+        username: username,
+        email: email,
+      });
+
+      document.getElementById('username_write').value = "";
+      document.getElementById('email_write').value = "";
+    }
+
+    function readUserData() {
+      var userId = document.getElementById('userId_read').value;
+      firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
+        console.log(snapshot.val())
+        alert("username : " + snapshot.val().username + "\nemail : " + snapshot.val().email)
+      });
+    }
+  </script>
+
 </body>
 
 </html>

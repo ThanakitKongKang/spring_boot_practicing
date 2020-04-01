@@ -53,6 +53,17 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>com.google.firebase</groupId>
+			<artifactId>firebase-server-sdk</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.alperkurtul</groupId>
+			<artifactId>spring-boot-starter-firebase-realtime-database</artifactId>
+			<version>1.0.5.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>
